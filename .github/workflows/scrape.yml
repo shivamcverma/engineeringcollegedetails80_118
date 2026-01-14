@@ -2,8 +2,8 @@ name: MBA Scraper
 
 on:
   schedule:
-    cron: "30 5 * * *"  # 3:00 AM IST
-  workflow_dispatch:
+    - cron: "10 5 * * *"   # 11:10 AM IST
+  workflow_dispatch: {}
 
 permissions:
   contents: write
