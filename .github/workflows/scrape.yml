@@ -2,7 +2,7 @@ name: MBA Scraper
 
 on:
   schedule:
-    - cron: "30 21 * * *"   # 3:00 AM IST
+    cron: "30 5 * * *"  # 3:00 AM IST
   workflow_dispatch:
 
 permissions:
@@ -27,7 +27,7 @@ jobs:
       - name: Install Chromium
         run: |
           sudo apt-get update
-          sudo apt-get install -y chromium-browser
+          sudo apt-get install -y chromium
 
       - name: Run scraper
         run: python scraper.py
