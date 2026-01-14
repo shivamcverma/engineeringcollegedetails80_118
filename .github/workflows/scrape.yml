@@ -2,7 +2,7 @@ name: MBA Scraper
 
 on:
   schedule:
-    - cron: "25 5 * * *"  # 11:25   # 11:10 AM IST
+    - cron: "0 3 * * *" # Daily 3 AM
   workflow_dispatch: {}
 
 permissions:
@@ -36,6 +36,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add mba_data.json
+          git add en_details_data.json
           git commit -m "Auto update MBA data" || echo "No changes"
           git push
